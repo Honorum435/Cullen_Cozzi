@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Estudio | Estudio CULLEN &amp; COZZI</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./src/Img/portada.png" class="logo-img" alt="Estudio Cullen Cozzi" />
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a href="./index.html">INICIO</a></li>
+        <li><a href="./servicios.html">SERVICIOS</a></li>
+        <li><a href="./estudio.html">ESTUDIO</a></li>
+        <li><a href="./contacto.html">CONTACTO</a></li>
+        <li><a href="./blog.html">BLOG</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="https://www.instagram.com/estudiocullencozzi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.92 4.92 0 011.77 1.153 4.92 4.92 0 011.153 1.772c.163.46.349 1.26.403 2.43.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.92 4.92 0 01-1.153 1.77 4.92 4.92 0 01-1.772 1.153c-.46.163-1.26.349-2.43.403-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.92 4.92 0 01-1.77-1.153 4.92 4.92 0 01-1.153-1.772c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.92 4.92 0 013.79 2.95a4.92 4.92 0 011.772-1.153c.46-.163 1.26-.349 2.43-.403C9.416 2.175 9.796 2.163 12 2.163M12 0C8.741 0 8.333.014 7.053.072 5.775.13 4.902.333 4.14.63a6.88 6.88 0 00-2.49 1.62A6.88 6.88 0 00.63 4.74C.333 5.502.13 6.375.072 7.653.014 8.933 0 9.341 0 12s.014 3.067.072 4.347c.058 1.278.261 2.151.558 2.913a6.88 6.88 0 001.62 2.49 6.88 6.88 0 002.49 1.62c.762.297 1.635.5 2.913.558C8.933 23.986 9.341 24 12 24s3.067-.014 4.347-.072c1.278-.058 2.151-.261 2.913-.558a6.88 6.88 0 002.49-1.62 6.88 6.88 0 001.62-2.49c.297-.762.5-1.635.558-2.913C23.986 15.067 24 14.659 24 12s-.014-3.067-.072-4.347c-.058-1.278-.261-2.151-.558-2.913a6.88 6.88 0 00-1.62-2.49A6.88 6.88 0 0019.26.63C18.498.333 17.625.13 16.347.072 15.067.014 14.659 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/estudiocullencozzi/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sobre el estudio -->
+    <section id="estudio" class="estudio-text-only">
+      <div class="estudio-container">
+        <div class="estudio-text" data-animate>
+          <h2>Abogados litigantes especialistas en <span class="hero-accent">Defensas Penales</span></h2>
+          <p>Nuestro estudio se conforma principalmente por los abogados Miguel Ángel Cullen y Patricio Nicolás Cozzi quienes se destacan por la experiencia, profesionalidad, preparación y excelencia en el litigio de causas penales. Hemos enfocado nuestra práctica en la atención personalizada de problemas de clientes particulares en las áreas del derecho penal, llevando adelante tanto defensas penales y querellas. Formamos un equipo de trabajo con experiencia profesional, dedicado totalmente a buscar el éxito en los asuntos que nos confían nuestros clientes. Trabajamos en los fueros de la provincia de Entre Ríos, Santa Fe, Buenos Aires, CABA y, en el fuero federal, en todo el país.</p>
+          <p class="estudio-note">Sabemos lo tedioso que puede ser tener un problema y no encontrarle solución, por eso es que nos dedicamos especialmente a cada uno de nuestros clientes para darle la mejor y más rápida atención.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería / En los Medios -->
+    <section id="galeria">
+      <h2 data-animate>En los Medios</h2>
+      <p class="galeria-intro" data-animate>Presencia y trayectoria en medios de comunicación</p>
+      <div class="galeria-grid">
+        <div class="galeria-item galeria-wide" data-animate>
+          <img src="./src/Img/foto6.jpg" alt="Cullen y Cozzi en juicio oral" loading="lazy" />
+        </div>
+        <div class="galeria-item" data-animate>
+          <img src="./src/Img/foto4.jpg" alt="Entrevista Canal 9" loading="lazy" />
+        </div>
+        <div class="galeria-item" data-animate>
+          <img src="./src/Img/foto8.jpeg" alt="Patricio Cozzi en medios" loading="lazy" />
+        </div>
+        <div class="galeria-item" data-animate>
+          <img src="./src/Img/foto5.webp" alt="Cullen y Cozzi en estudio de TV" loading="lazy" />
+        </div>
+        <div class="galeria-item" data-animate>
+          <img src="./src/Img/foto9.jpg" alt="Miguel Cullen - Juicios por Jurados" loading="lazy" />
+        </div>
+        <div class="galeria-item" data-animate>
+          <img src="./src/Img/foto7.jpg" alt="Miguel Cullen en medios" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="./index.html">INICIO</a>
+        <a href="./servicios.html">SERVICIOS</a>
+        <a href="./estudio.html">ESTUDIO</a>
+        <a href="./contacto.html">CONTACTO</a>
+        <a href="./blog.html">BLOG</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/estudiocullencozzi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.92 4.92 0 011.77 1.153 4.92 4.92 0 011.153 1.772c.163.46.349 1.26.403 2.43.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.92 4.92 0 01-1.153 1.77 4.92 4.92 0 01-1.772 1.153c-.46.163-1.26.349-2.43.403-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.92 4.92 0 01-1.77-1.153 4.92 4.92 0 01-1.153-1.772c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.92 4.92 0 013.79 2.95a4.92 4.92 0 011.772-1.153c.46-.163 1.26-.349 2.43-.403C9.416 2.175 9.796 2.163 12 2.163M12 0C8.741 0 8.333.014 7.053.072 5.775.13 4.902.333 4.14.63a6.88 6.88 0 00-2.49 1.62A6.88 6.88 0 00.63 4.74C.333 5.502.13 6.375.072 7.653.014 8.933 0 9.341 0 12s.014 3.067.072 4.347c.058 1.278.261 2.151.558 2.913a6.88 6.88 0 001.62 2.49 6.88 6.88 0 002.49 1.62c.762.297 1.635.5 2.913.558C8.933 23.986 9.341 24 12 24s3.067-.014 4.347-.072c1.278-.058 2.151-.261 2.913-.558a6.88 6.88 0 002.49-1.62 6.88 6.88 0 001.62-2.49c.297-.762.5-1.635.558-2.913C23.986 15.067 24 14.659 24 12s-.014-3.067-.072-4.347c-.058-1.278-.261-2.151-.558-2.913a6.88 6.88 0 00-1.62-2.49A6.88 6.88 0 0019.26.63C18.498.333 17.625.13 16.347.072 15.067.014 14.659 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/estudiocullencozzi/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Estudio CULLENCOZZI | Abogados Penalistas</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/5493434501560" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
