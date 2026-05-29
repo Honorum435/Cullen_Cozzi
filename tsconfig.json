@@ -1,16 +1,17 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     "target": "es2020",
     "module": "es2020",
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "moduleResolution": "bundler",
     "strict": true,
     "lib": ["es2020", "dom", "dom.iterable"],
     "sourceMap": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true
   },
   "include": ["src"]
 }

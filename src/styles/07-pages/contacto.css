@@ -1,0 +1,112 @@
+@layer pages {
+  .contact-page {
+    padding-block: var(--space-2xl);
+    padding-inline: var(--gutter);
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-top: calc(var(--space-xl) + 100px);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .contact-info__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-display);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 72;
+    color: var(--fg);
+    max-width: 14ch;
+  }
+
+  .contact-info__title em {
+    font-style: italic;
+    color: inherit;
+  }
+
+  .contact-info__lead {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--fg-muted);
+    max-width: 42ch;
+  }
+
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-block: var(--space-sm);
+    border-top: 1px solid var(--line);
+  }
+
+  .contact-block:last-of-type {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact-block__label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .contact-block__value {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    font-variation-settings: "opsz" 36;
+  }
+
+  .contact-block__value a {
+    transition: color var(--t-fast);
+  }
+
+  .contact-block__value a:hover {
+    color: var(--accent);
+  }
+
+  .contact-block__small {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+    line-height: 1.5;
+  }
+
+  .contact-form-wrap {
+    padding: var(--space-lg);
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+  }
+
+  .contact-form-wrap__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-h2);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    font-variation-settings: "opsz" 48;
+    color: var(--fg);
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@layer tokens {
+  :root {
+    /* ===== Paleta Gris Suave ===== */
+    --color-cream: #a86746; /* paper warm, menos blanco que antes */
+    --color-bone: #e6e2da; /* surface lift cálido */
+    --color-stone: #cfcbc1; /* divisores y zonas frías */
+    --color-ash: #807c74; /* gris medio cálido — muted text */
+    --color-ink: #2d2d2b; /* graphite carbon, no puro negro */
+    --color-ink-soft: #3f3e3a;
+    --color-oxblood: #44423d; /* accent suave warm */
+    --color-oxblood-soft: #5a574f;
+
+    /* Aliases semánticos */
+    --bg: var(--color-cream);
+    --bg-alt: var(--color-bone);
+    --fg: var(--color-ink);
+    --fg-muted: var(--color-ash);
+    --accent: #5a574f; /* warm grey, leve dif para hover */
+    --line: rgba(45, 45, 43, 0.08);
+
+    /* ===== Tipografía ===== */
+    --font-display: "Fraunces", "Times New Roman", Georgia, serif;
+    --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    /* Type scale fluido — clamp(min, ideal, max) */
+    --fs-mono: clamp(0.7rem, 0.65rem + 0.2vw, 0.78rem);
+    --fs-caption: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+    --fs-body: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
+    --fs-lead: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
+    --fs-h3: clamp(1.2rem, 1rem + 0.7vw, 1.6rem);
+    --fs-h2: clamp(1.6rem, 1.3rem + 1.2vw, 2.4rem);
+    --fs-h1: clamp(2rem, 1.5rem + 1.8vw, 3.2rem);
+    --fs-display: clamp(2.4rem, 1.8rem + 2.5vw, 4rem);
+    --fs-display-xl: clamp(2.8rem, 2rem + 3vw, 4.8rem);
+
+    /* Tracking */
+    --tracking-tight: -0.03em;
+    --tracking-snug: -0.015em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.08em;
+    --tracking-mega: 0.24em;
+
+    /* Leading */
+    --lh-tight: 0.92;
+    --lh-snug: 1.05;
+    --lh-body: 1.55;
+    --lh-relaxed: 1.7;
+
+    /* ===== Espaciado fluido ===== */
+    --space-3xs: clamp(0.25rem, 0.2rem + 0.2vw, 0.4rem);
+    --space-2xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+    --space-xs: clamp(0.75rem, 0.6rem + 0.7vw, 1rem);
+    --space-sm: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+    --space-md: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+    --space-lg: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+    --space-xl: clamp(4rem, 3rem + 5vw, 7rem);
+    --space-2xl: clamp(6rem, 4rem + 8vw, 11rem);
+    --space-3xl: clamp(8rem, 5rem + 12vw, 16rem);
+
+    /* ===== Layout ===== */
+    --container-max: 1440px;
+    --container-narrow: 720px;
+    --container-text: 60ch;
+    --gutter: clamp(1.25rem, 4vw, 3rem);
+
+    /* ===== Bordes / radios ===== */
+    --radius-none: 0;
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+
+    /* ===== Easings + tiempos ===== */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --t-fast: 200ms;
+    --t-base: 400ms;
+    --t-slow: 700ms;
+    --t-cinema: 1100ms;
+
+    /* ===== Sombras (mínimas, editorial) ===== */
+    --shadow-soft: 0 24px 60px -30px rgba(13, 13, 13, 0.25);
+    --shadow-press: 0 2px 0 0 var(--color-ink);
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cullen & Cozzi">
+  <rect width="64" height="64" rx="12" fill="#0a0a0a"/>
+  <g fill="none" stroke="#c49b66" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="32" y1="14" x2="32" y2="50"/>
+    <line x1="20" y1="50" x2="44" y2="50"/>
+    <line x1="16" y1="20" x2="48" y2="20"/>
+    <circle cx="32" cy="20" r="2.6" fill="#c49b66"/>
+    <path d="M16 20 L11 32 H21 Z"/>
+    <path d="M48 20 L43 32 H53 Z"/>
+  </g>
+</svg>

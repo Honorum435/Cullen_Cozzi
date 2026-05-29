@@ -1,0 +1,61 @@
+@layer components {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding-block: var(--space-sm);
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
+    border-bottom: 1px solid transparent;
+    transition: background var(--t-base) var(--ease-out-quart),
+      border-color var(--t-base) var(--ease-out-quart),
+      padding var(--t-base) var(--ease-out-quart);
+  }
+
+  .site-header.is-scrolled {
+    padding-block: calc(var(--space-sm) * 0.6);
+    border-bottom-color: var(--line);
+  }
+
+  .site-header__inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+
+  .site-header__brand {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 1.25rem);
+    letter-spacing: var(--tracking-snug);
+    line-height: 1;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .site-header__brand strong {
+    font-weight: 400;
+    font-variation-settings: "opsz" 60;
+  }
+
+  .site-header__brand small {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  /* Page top spacing — empuja main bajo header fijo */
+  body {
+    padding-top: 0;
+  }
+}

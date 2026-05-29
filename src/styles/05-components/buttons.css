@@ -1,0 +1,106 @@
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    padding: 1.1em 1.8em;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    line-height: 1;
+    border-radius: 0;
+    cursor: pointer;
+    border: 1px solid currentColor;
+    transition: transform var(--t-fast) var(--ease-out-quart),
+      background var(--t-base) ease, color var(--t-base) ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .btn::after {
+    content: "→";
+    font-family: var(--font-body);
+    font-size: 1.2em;
+    transition: transform var(--t-fast) var(--ease-out-quart);
+  }
+
+  .btn:hover::after {
+    transform: translateX(3px);
+  }
+
+  /* Primary — ink solid */
+  .btn-primary {
+    background: var(--color-ink);
+    color: var(--color-cream);
+    border-color: var(--color-ink);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-oxblood);
+    border-color: var(--color-oxblood);
+  }
+
+  body.theme-ink .btn-primary {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    border-color: var(--color-cream);
+  }
+
+  body.theme-ink .btn-primary:hover {
+    background: var(--color-oxblood);
+    color: var(--color-cream);
+    border-color: var(--color-oxblood);
+  }
+
+  /* Ghost outline */
+  .btn-ghost {
+    background: transparent;
+    color: var(--fg);
+    border-color: var(--fg);
+  }
+
+  .btn-ghost:hover {
+    background: var(--fg);
+    color: var(--bg);
+  }
+
+  /* Accent oxblood */
+  .btn-accent {
+    background: var(--color-oxblood);
+    color: var(--color-cream);
+    border-color: var(--color-oxblood);
+  }
+
+  .btn-accent:hover {
+    background: var(--color-oxblood-soft);
+    border-color: var(--color-oxblood-soft);
+  }
+
+  /* Link-button — solo subrayado fino */
+  .btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--fg);
+    padding-block: 0.5rem;
+    border-bottom: 1px solid currentColor;
+    transition: color var(--t-fast), gap var(--t-base) var(--ease-out-quart);
+  }
+
+  .btn-link:hover {
+    color: var(--accent);
+    gap: 0.9em;
+  }
+
+  /* Tiny size */
+  .btn-mini {
+    padding: 0.7em 1.1em;
+    font-size: 0.65rem;
+  }
+}

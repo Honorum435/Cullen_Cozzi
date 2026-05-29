@@ -1,0 +1,95 @@
+@layer components {
+  .editorial-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 100%;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    position: relative;
+  }
+
+  .field label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .field input,
+  .field textarea {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    padding: 0.75rem 0;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--fg);
+    border-radius: 0;
+    transition: border-color var(--t-base) ease;
+    resize: vertical;
+    width: 100%;
+  }
+
+  .field input::placeholder,
+  .field textarea::placeholder {
+    color: transparent;
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+  }
+
+  .field textarea {
+    min-height: 8rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .form-submit {
+    align-self: flex-start;
+    margin-top: var(--space-xs);
+  }
+
+  .form-message {
+    margin-top: var(--space-sm);
+    padding: 1rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: var(--tracking-wide);
+    border-left: 3px solid var(--accent);
+    background: var(--bg-alt);
+  }
+
+  .form-message.success {
+    border-left-color: var(--color-ink);
+    color: var(--color-ink);
+  }
+
+  .form-message.error {
+    border-left-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .form-message[hidden] {
+    display: none;
+  }
+
+  @media (max-width: 700px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+}

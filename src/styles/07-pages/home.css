@@ -1,0 +1,295 @@
+@layer pages {
+  /* ===== HERO ===== */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    padding-block: calc(var(--space-md) + 90px) var(--space-2xl);
+    padding-inline: var(--gutter);
+    max-width: var(--container-max);
+    margin-inline: auto;
+    position: relative;
+  }
+
+  .hero__caseline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero__title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    width: 100%;
+  }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-display);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 72;
+    color: var(--fg);
+    max-width: 14ch;
+  }
+
+  .hero__title .word {
+    display: block;
+  }
+
+  .hero__title em {
+    font-style: italic;
+    color: inherit;
+    font-variation-settings: inherit;
+  }
+
+  .hero__bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: var(--space-md);
+    border-top: 1px solid var(--line);
+    padding-top: var(--space-md);
+  }
+
+  .hero__pitch {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--fg-muted);
+    max-width: 42ch;
+  }
+
+  .hero__cta {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  /* ===== Manifiesto ===== */
+  .manifesto {
+    padding-block: var(--space-2xl);
+    padding-inline: var(--gutter);
+  }
+
+  .manifesto__inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .manifesto__label {
+    position: sticky;
+    top: 24vh;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .manifesto__text {
+    max-width: 36ch;
+  }
+
+  .manifesto__text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 48;
+    margin-bottom: 1em;
+  }
+
+  .manifesto__text p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--fg-muted);
+    max-width: none;
+  }
+
+  .manifesto__text p + p {
+    margin-top: 1em;
+  }
+
+  .manifesto__text em {
+    font-style: italic;
+    color: inherit;
+  }
+
+  /* ===== Founders ===== */
+  .founders {
+    padding-block: var(--space-2xl);
+    padding-inline: var(--gutter);
+  }
+
+  .founders__inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+  }
+
+  .founders__head {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-md);
+    align-items: end;
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: var(--space-md);
+  }
+
+  .founders__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-h1);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 60;
+    color: var(--fg);
+  }
+
+  .founders__title em {
+    font-style: italic;
+    color: inherit;
+  }
+
+  .founders__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* ===== Marquee ===== */
+  .areas-marquee-section {
+    padding-block: var(--space-lg);
+  }
+
+  /* ===== Press strip ===== */
+  .press {
+    padding-block: var(--space-2xl);
+    padding-inline: var(--gutter);
+    background: var(--bg-alt);
+  }
+
+  .press__inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+  }
+
+  .press__head {
+    margin-bottom: var(--space-lg);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-md);
+    align-items: end;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: var(--space-md);
+  }
+
+  .press__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-h1);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 60;
+  }
+
+  .press__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+  }
+
+  /* ===== CTA final ===== */
+  .cta-final {
+    padding-block: var(--space-2xl);
+    padding-inline: var(--gutter);
+    background: var(--color-ink);
+    color: var(--color-cream);
+  }
+
+  .cta-final__inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+    align-items: end;
+  }
+
+  .cta-final__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-h1);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 60;
+    color: var(--color-cream);
+    max-width: 16ch;
+  }
+
+  .cta-final__title em {
+    font-style: italic;
+    color: inherit;
+  }
+
+  .cta-final__pitch {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 40ch;
+    color: var(--color-stone);
+    margin-top: var(--space-sm);
+  }
+
+  .cta-final__actions {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .cta-final .btn-ghost {
+    color: var(--color-cream);
+    border-color: var(--color-cream);
+  }
+
+  .cta-final .btn-ghost:hover {
+    background: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  @media (max-width: 900px) {
+    .manifesto__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .manifesto__label {
+      position: static;
+    }
+    .founders__head,
+    .founders__grid,
+    .press__head,
+    .cta-final__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .hero__bottom {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .cta-final__actions {
+      justify-content: flex-start;
+    }
+  }
+}

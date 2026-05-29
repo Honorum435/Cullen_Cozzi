@@ -1,0 +1,158 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tracking-snug);
+    color: var(--fg);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--fs-h1);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 60;
+  }
+
+  h2 {
+    font-size: var(--fs-h2);
+    line-height: 1.1;
+    font-variation-settings: "opsz" 48;
+  }
+
+  h3 {
+    font-size: var(--fs-h3);
+    font-variation-settings: "opsz" 36;
+  }
+
+  /* Italic en titulares: inherit color, sin acento de color */
+  h1 em, h2 em, h3 em {
+    font-style: italic;
+    color: inherit;
+    font-variation-settings: inherit;
+  }
+
+  p {
+    text-wrap: pretty;
+    max-width: var(--container-text);
+  }
+}
+
+@layer components {
+  /* Display — hero, números, palabras-pieza */
+  .display {
+    font-family: var(--font-display);
+    font-size: var(--fs-display);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 72;
+    text-wrap: balance;
+    max-width: none;
+  }
+
+  .display-xl {
+    font-family: var(--font-display);
+    font-size: var(--fs-display-xl);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 96;
+    text-wrap: balance;
+    max-width: none;
+  }
+
+  /* Eyebrow / kicker — texto pequeño en mono uppercase */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    font-weight: 500;
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 1.5em;
+    height: 1px;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+
+  .eyebrow.no-line::before {
+    display: none;
+  }
+
+  /* Lead — párrafo grande editorial */
+  .lead {
+    font-family: var(--font-display);
+    font-size: var(--fs-lead);
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: var(--tracking-snug);
+    font-variation-settings: "opsz" 36;
+    max-width: 30ch;
+  }
+
+  /* Body editorial */
+  .body-large {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: var(--lh-relaxed);
+    font-weight: 400;
+    max-width: var(--container-text);
+  }
+
+  .body-large > p + p {
+    margin-top: 1em;
+  }
+
+  /* Italic accent */
+  .ital {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+
+  /* Acento oxblood */
+  .accent-ink {
+    color: var(--accent);
+  }
+
+  /* Mono caption */
+  .mono {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 2.8rem);
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--accent);
+    max-width: 22ch;
+    text-wrap: balance;
+    font-variation-settings: "opsz" 90, "SOFT" 100;
+  }
+
+  .pull-quote::before {
+    content: "“";
+    display: block;
+    font-size: 1.4em;
+    line-height: 0.2;
+    margin-bottom: 0.3em;
+    color: var(--accent);
+  }
+}

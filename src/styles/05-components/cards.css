@@ -1,0 +1,279 @@
+@layer components {
+  /* ===== Team card — perfil editorial ===== */
+  .team-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    position: relative;
+  }
+
+  .team-card__media {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .team-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.05);
+    transition: filter var(--t-cinema) var(--ease-out-quart),
+      transform var(--t-cinema) var(--ease-out-quart);
+  }
+
+  .team-card:hover .team-card__media img {
+    filter: grayscale(0.1);
+    transform: scale(1.03);
+  }
+
+  .team-card__num {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .team-card__name {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 1rem + 1vw, 1.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 36;
+    color: var(--fg);
+  }
+
+  .team-card__name em {
+    font-style: italic;
+    color: inherit;
+  }
+
+  .team-card__role {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .team-card__bio {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--fg);
+    max-width: 50ch;
+  }
+
+  .team-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--space-xs);
+  }
+
+  .team-card__tags li {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    padding: 0.4em 0.9em;
+    border: 1px solid var(--line);
+    color: var(--fg-muted);
+  }
+
+  .team-card__actions {
+    display: flex;
+    gap: var(--space-xs);
+    margin-top: var(--space-xs);
+  }
+
+  /* ===== Blog card editorial ===== */
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    padding-block: var(--space-sm);
+    border-bottom: 1px solid var(--line);
+    transition: background var(--t-base);
+  }
+
+  .blog-card__media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--color-stone);
+  }
+
+  .blog-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.05);
+    transition: filter var(--t-base) var(--ease-out-quart),
+      transform var(--t-cinema) var(--ease-out-quart);
+  }
+
+  .blog-card:hover .blog-card__media img {
+    filter: grayscale(0.15);
+    transform: scale(1.05);
+  }
+
+  .blog-card__meta {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .blog-card__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.4rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    transition: color var(--t-base);
+    font-variation-settings: "opsz" 24;
+  }
+
+  .blog-card:hover .blog-card__title {
+    color: var(--accent);
+  }
+
+  .blog-card__excerpt {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--fg-muted);
+    max-width: 45ch;
+  }
+
+  /* Feature variant — blog feature article */
+  .blog-card--feature {
+    padding-block: var(--space-md);
+  }
+
+  .blog-card--feature .blog-card__media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .blog-card--feature .blog-card__title {
+    font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.6rem);
+    line-height: 1.1;
+    font-variation-settings: "opsz" 48;
+  }
+
+  /* ===== Service item — list-as-hero ===== */
+  .service-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+    padding-block: var(--space-md);
+    border-top: 1px solid var(--line);
+    position: relative;
+    transition: padding var(--t-base) var(--ease-out-quart);
+  }
+
+  .service-item:last-of-type {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .service-item__num {
+    font-family: var(--font-mono);
+    font-size: clamp(0.8rem, 0.6rem + 0.5vw, 1rem);
+    letter-spacing: var(--tracking-mega);
+    color: var(--fg-muted);
+    padding-top: 0.5em;
+  }
+
+  .service-item__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 48;
+    color: var(--fg);
+    transition: color var(--t-base) var(--ease-out-quart),
+      transform var(--t-base) var(--ease-out-quart);
+    cursor: pointer;
+  }
+
+  .service-item__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .service-item__desc {
+    font-size: 1rem;
+    line-height: 1.65;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height var(--t-cinema) var(--ease-out-quart),
+      opacity var(--t-base) var(--ease-out-quart);
+  }
+
+  .service-item.is-open .service-item__desc {
+    max-height: 30rem;
+    opacity: 1;
+    margin-top: var(--space-xs);
+  }
+
+  .service-item:hover .service-item__title,
+  .service-item.is-open .service-item__title {
+    color: var(--accent);
+    transform: translateX(0.5rem);
+  }
+
+  .service-item__toggle {
+    align-self: start;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--fg-muted);
+    transition: transform var(--t-base) var(--ease-out-quart),
+      color var(--t-base);
+  }
+
+  .service-item.is-open .service-item__toggle {
+    transform: rotate(45deg);
+    color: var(--accent);
+  }
+
+  @media (max-width: 700px) {
+    .service-item {
+      grid-template-columns: 1fr;
+      gap: var(--space-xs);
+    }
+  }
+
+  /* ===== Press card — pull quote de medios ===== */
+  .press-quote {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-md);
+    border: 1px solid var(--line);
+    background: var(--bg-alt);
+    height: 100%;
+  }
+
+  .press-quote__source {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .press-quote__text {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
+    line-height: 1.4;
+    font-style: italic;
+    font-variation-settings: "opsz" 24;
+    color: var(--fg);
+  }
+}

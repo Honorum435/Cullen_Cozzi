@@ -1,0 +1,101 @@
+@layer pages {
+  .blog-page {
+    padding-block: var(--space-2xl);
+    padding-inline: var(--gutter);
+    max-width: var(--container-max);
+    margin-inline: auto;
+  }
+
+  .blog-page__masthead {
+    padding-top: 100px;
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--fg);
+    margin-bottom: var(--space-lg);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-md);
+    align-items: end;
+  }
+
+  .blog-page__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-display);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 72;
+    color: var(--fg);
+  }
+
+  .blog-page__title em {
+    font-style: italic;
+    color: inherit;
+  }
+
+  .blog-page__issue {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    text-align: right;
+  }
+
+  .blog-page__issue strong {
+    display: block;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin-top: 0.3em;
+  }
+
+  /* Featured */
+  .blog-feature {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .blog-feature .blog-card--feature {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: var(--space-lg);
+    align-items: center;
+    padding-block: 0;
+    border-bottom: 0;
+  }
+
+  .blog-feature .blog-card__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .blog-grid .blog-card {
+    border-bottom: 0;
+    padding-block: 0;
+  }
+
+  @media (max-width: 900px) {
+    .blog-page__masthead {
+      grid-template-columns: 1fr;
+    }
+    .blog-page__issue {
+      text-align: left;
+    }
+    .blog-feature .blog-card--feature {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

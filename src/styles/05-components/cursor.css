@@ -1,0 +1,174 @@
+@layer components {
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--fg);
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width var(--t-base) var(--ease-out-quart),
+      height var(--t-base) var(--ease-out-quart),
+      background var(--t-base) var(--ease-out-quart),
+      border-color var(--t-base) var(--ease-out-quart);
+    mix-blend-mode: difference;
+    opacity: 0;
+    will-change: transform, width, height;
+  }
+
+  .cursor.is-ready {
+    opacity: 1;
+  }
+
+  .cursor.is-hover {
+    width: 56px;
+    height: 56px;
+    background: var(--fg);
+  }
+
+  .cursor.is-link {
+    width: 64px;
+    height: 64px;
+    border-color: var(--color-cream);
+    background: transparent;
+    mix-blend-mode: difference;
+  }
+
+  body.theme-ink .cursor {
+    border-color: var(--color-cream);
+  }
+
+  /* Esconde el cursor nativo solo cuando custom está activo */
+  body.has-cursor {
+    cursor: none;
+  }
+  body.has-cursor a,
+  body.has-cursor button,
+  body.has-cursor input,
+  body.has-cursor textarea,
+  body.has-cursor [data-cursor] {
+    cursor: none;
+  }
+
+  /* En touch / pointer: coarse, oculta el cursor custom */
+  @media (pointer: coarse), (hover: none) {
+    .cursor {
+      display: none;
+    }
+    body.has-cursor,
+    body.has-cursor * {
+      cursor: auto;
+    }
+  }
+}
+
+@layer motion {
+  /* Scroll indicator hero */
+  .scroll-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    opacity: 0.7;
+  }
+
+  .scroll-indicator::after {
+    content: "";
+    width: 1px;
+    height: 36px;
+    background: var(--fg-muted);
+    display: inline-block;
+    transform-origin: top;
+    animation: scrollBar 2.4s var(--ease-in-out-quart) infinite;
+  }
+
+  @keyframes scrollBar {
+    0% {
+      transform: scaleY(0);
+      transform-origin: top;
+    }
+    50% {
+      transform: scaleY(1);
+      transform-origin: top;
+    }
+    50.01% {
+      transform-origin: bottom;
+    }
+    100% {
+      transform: scaleY(0);
+      transform-origin: bottom;
+    }
+  }
+
+  /* Image clip reveal (asciende desde abajo con clip-path) */
+  .img-reveal {
+    overflow: hidden;
+  }
+  .img-reveal img,
+  .img-reveal picture {
+    clip-path: inset(100% 0 0 0);
+    transform: scale(1.1);
+    transition: clip-path 1.3s var(--ease-out-expo),
+      transform 1.5s var(--ease-out-expo);
+    will-change: clip-path, transform;
+  }
+  .img-reveal.is-visible img,
+  .img-reveal.is-visible picture {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+  }
+
+  /* Card tilt (CSS-driven, 3D leve) */
+  .tilt {
+    transform-style: preserve-3d;
+    transition: transform var(--t-base) var(--ease-out-quart);
+    will-change: transform;
+  }
+
+  /* Magnetic button area helper (la posición la setea JS via translate3d) */
+  [data-magnetic] {
+    will-change: transform;
+    transition: transform var(--t-base) var(--ease-out-quart);
+  }
+
+  /* Marquee speed-up on hover via data attr (manejo JS) */
+  .marquee:hover .marquee-item {
+    color: var(--accent);
+  }
+
+  /* Letter-by-letter nav link hover */
+  .nav-link {
+    display: inline-block;
+    position: relative;
+  }
+  .nav-link__letters {
+    display: inline-flex;
+  }
+  .nav-link__letter {
+    display: inline-block;
+    transition: transform var(--t-base) var(--ease-out-quart),
+      color var(--t-base);
+  }
+  .nav-link:hover .nav-link__letter {
+    transform: translateY(-1.5px);
+  }
+  .nav-link:hover .nav-link__letter:nth-child(2n) {
+    transform: translateY(1.5px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body { opacity: 1 !important; }
+    .img-reveal img, .img-reveal picture {
+      clip-path: none !important;
+      transform: none !important;
+    }
+    .scroll-indicator::after { animation: none; }
+  }
+}

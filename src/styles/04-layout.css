@@ -1,0 +1,106 @@
+@layer layout {
+  /* Cascade layout — container fluido */
+  .container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .container-narrow {
+    width: 100%;
+    max-width: var(--container-narrow);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* Section base */
+  .section {
+    padding-block: var(--space-2xl);
+    position: relative;
+  }
+
+  .section-tight {
+    padding-block: var(--space-xl);
+  }
+
+  .section-large {
+    padding-block: var(--space-3xl);
+  }
+
+  /* Grid editorial — col 12 */
+  .grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gutter);
+    width: 100%;
+  }
+
+  /* Grid asimétrico para hero / dossier */
+  .grid-asymmetric {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    align-items: start;
+  }
+
+  /* Split — info + form */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  /* Stack vertical con ritmo */
+  .stack > * + * {
+    margin-top: var(--space-sm);
+  }
+  .stack-lg > * + * {
+    margin-top: var(--space-md);
+  }
+  .stack-xl > * + * {
+    margin-top: var(--space-lg);
+  }
+
+  /* Cluster horizontal */
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  /* Visually-hidden a11y */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Divider line editorial */
+  .rule {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin-block: var(--space-md);
+  }
+
+  .rule-thick {
+    border-top: 2px solid var(--fg);
+  }
+
+  /* Responsive — apilan al achicar */
+  @media (max-width: 900px) {
+    .split,
+    .grid-asymmetric {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+  }
+}
